@@ -17,100 +17,53 @@ import {
 import { PEOPLE_BANK, Person } from "../../data/peopleBank";
 import NexaLogo from "../atoms/NexaLogo";
 
-interface SidebarProps {
-  searchQuery: string;
-  setSearchQuery: (val: string) => void;
-  clientName: string;
-  setClientName: (val: string) => void;
-  score: number;
-  setScore: (val: number) => void;
-  probabilidade: number;
-  setProbabilidade: (val: number) => void;
-  cpf: string;
-  setCpf: (val: string) => void;
-  notaFaturas: string;
-  setNotaFaturas: (val: string) => void;
-  notaContratos: string;
-  setNotaContratos: (val: string) => void;
-  onReset: () => void;
-  currentPerson: Person;
-  setCurrentPerson: (p: Person) => void;
-  protestosCount: number;
-  setProtestosCount: (val: number) => void;
-  processosCount: number;
-  setProcessosCount: (val: number) => void;
-  consultasCount: number;
-  setConsultasCount: (val: any) => void;
-  bacenCount: number;
-  setBacenCount: (val: number) => void;
-  totalRestricoesConsolidado: number;
-  totalProcessos: number;
-  totalBacenCredito: number;
+import { useCreditReport } from "../../state/CreditReportContext";
 
-  tipoPessoa: "PF" | "PJ";
-  setTipoPessoa: (val: "PF" | "PJ") => void;
-
-  // New Isolated Props
-  ratingGeral: string;
-  setRatingGeral: (val: string) => void;
-  pendenciasFonteIICount: number;
-  setPendenciasFonteIICount: (val: number) => void;
-  restricoesFonteIIICount: number;
-  setRestricoesFonteIIICount: (val: number) => void;
-  bancariasCount: number;
-  setBancariasCount: (val: number) => void;
-  chequesCount: number;
-  setChequesCount: (val: number) => void;
-  scoreBacenScr: number;
-  setScoreBacenScr: (val: number) => void;
-}
-
-export default function Sidebar({
-  searchQuery,
-  setSearchQuery,
-  clientName,
-  setClientName,
-  score,
-  setScore,
-  probabilidade,
-  setProbabilidade,
-  cpf,
-  setCpf,
-  notaFaturas,
-  setNotaFaturas,
-  notaContratos,
-  setNotaContratos,
-  onReset,
-  currentPerson,
-  setCurrentPerson,
-  protestosCount,
-  setProtestosCount,
-  processosCount,
-  setProcessosCount,
-  consultasCount,
-  setConsultasCount,
-  bacenCount,
-  setBacenCount,
-  totalRestricoesConsolidado,
-  totalProcessos,
-  totalBacenCredito,
-
-  tipoPessoa,
-  setTipoPessoa,
-
-  ratingGeral,
-  setRatingGeral,
-  pendenciasFonteIICount,
-  setPendenciasFonteIICount,
-  restricoesFonteIIICount,
-  setRestricoesFonteIIICount,
-  bancariasCount,
-  setBancariasCount,
-  chequesCount,
-  setChequesCount,
-  scoreBacenScr,
-  setScoreBacenScr
-}: SidebarProps) {
+export default function Sidebar() {
+  const {
+    searchQuery,
+    setSearchQuery,
+    clientName,
+    setClientName,
+    score,
+    setScore,
+    probabilidade,
+    setProbabilidade,
+    cpf,
+    setCpf,
+    notaFaturas,
+    setNotaFaturas,
+    notaContratos,
+    setNotaContratos,
+    currentPerson,
+    setCurrentPerson,
+    protestosCount,
+    setProtestosCount,
+    processosCount,
+    setProcessosCount,
+    consultasCount,
+    setConsultasCount,
+    bacenCount,
+    setBacenCount,
+    totalRestricoesConsolidado,
+    totalProcessos,
+    totalBacenCredito,
+    tipoPessoa,
+    setTipoPessoa,
+    ratingGeral,
+    setRatingGeral,
+    pendenciasFonteIICount,
+    setPendenciasFonteIICount,
+    restricoesFonteIIICount,
+    setRestricoesFonteIIICount,
+    bancariasCount,
+    setBancariasCount,
+    chequesCount,
+    setChequesCount,
+    scoreBacenScr,
+    setScoreBacenScr,
+    resetAllFilters: onReset,
+  } = useCreditReport();
 
   const triggerPrint = () => {
     window.print();

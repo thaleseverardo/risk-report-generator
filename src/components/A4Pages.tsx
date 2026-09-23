@@ -11,82 +11,43 @@ import Page6 from "./organisms/ReportPages/Page6";
 import Page7 from "./organisms/ReportPages/Page7";
 import Page8 from "./organisms/ReportPages/Page8";
 
-interface A4PagesProps {
-  searchQuery: string;
-  clientName: string;
-  score: number;
-  probabilidade: number;
-  cpf: string;
-  notaFaturas: string;
-  notaContratos: string;
-  currentPerson: Person;
-  pendenciasCount: number;
-  protestosCount: number;
-  bancariasCount: number;
-  processosCount: number;
-  consultasCount: number;
-  pendenciasRows: any[];
-  restricoesRows: any[];
-  protestosRows: any[];
-  bancariasRows: any[];
-  processosRows: any[];
-  consultasRows: any[];
-  totalPendencias: number;
-  totalRestricoes: number;
-  totalProtestos: number;
-  totalBancarias: number;
-  totalProcessos: number;
-  bacenCount: number;
-  bacenCreditoAVencerRows: any[];
-  bacenOperacoesRows: any[];
-  totalBacenCredito: number;
-  tipoPessoa: "PF" | "PJ";
-  
-  // Isolated Controls
-  ratingGeral: string;
-  pendenciasFonteIICount: number;
-  restricoesFonteIIICount: number;
-  chequesCount: number;
-  scoreBacenScr: number;
-}
+import { useCreditReport } from "../state/CreditReportContext";
 
-export default function A4Pages({ 
-  searchQuery,
-  clientName,
-  score,
-  probabilidade,
-  cpf,
-  notaFaturas,
-  notaContratos,
-  currentPerson,
-  pendenciasCount,
-  protestosCount,
-  bancariasCount,
-  processosCount,
-  consultasCount,
-  pendenciasRows,
-  restricoesRows,
-  protestosRows,
-  bancariasRows,
-  processosRows,
-  consultasRows,
-  totalPendencias,
-  totalRestricoes,
-  totalProtestos,
-  totalBancarias,
-  totalProcessos,
-  bacenCount,
-  bacenCreditoAVencerRows,
-  bacenOperacoesRows,
-  totalBacenCredito,
-  tipoPessoa,
-  
-  ratingGeral,
-  pendenciasFonteIICount,
-  restricoesFonteIIICount,
-  chequesCount,
-  scoreBacenScr
-}: A4PagesProps) {
+export default function A4Pages() {
+  const {
+    searchQuery,
+    clientName,
+    score,
+    probabilidade,
+    cpf,
+    notaFaturas,
+    notaContratos,
+    currentPerson,
+    protestosCount,
+    bancariasCount,
+    processosCount,
+    consultasCount,
+    pendenciasRows,
+    restricoesRows,
+    protestosRows,
+    bancariasRows,
+    processosRows,
+    consultasRows,
+    totalPendencias,
+    totalRestricoes,
+    totalProtestos,
+    totalBancarias,
+    totalProcessos,
+    bacenCount,
+    bacenCreditoAVencerRows,
+    bacenOperacoesRows,
+    tipoPessoa,
+    ratingGeral,
+    pendenciasFonteIICount,
+    restricoesFonteIIICount,
+    chequesCount,
+    scoreBacenScr,
+  } = useCreditReport();
   // Local state for interactive buttons in A4 representation
   const [showAllProtestos, setShowAllProtestos] = useState(false);
   const [showAllProcessos, setShowAllProcessos] = useState(false);
