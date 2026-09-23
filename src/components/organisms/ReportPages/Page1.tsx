@@ -78,7 +78,7 @@ export default function Page1({ clientName, cpf, currentPerson, highlight, tipoP
               <div className="text-right">
                 <span className="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider block">Situação do CPF</span>
                 <span className="inline-flex items-center gap-1 text-emerald-600 text-[10px] font-bold mt-1 uppercase tracking-wider">
-                  <Check className="w-3.5 h-3.5 text-emerald-600 stroke-[3]" />
+                  <Check className="w-3.5 h-3.5 text-emerald-600 stroke-3" />
                   REGULAR
                 </span>
               </div>

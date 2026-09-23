@@ -363,7 +363,7 @@ export default function Page2({
             <div className="grid grid-cols-3 gap-y-2.5 gap-x-6 border border-emerald-100/30 bg-emerald-50/10 p-4 rounded-none">
               {dynamicOcorrenciasSem.map((item, idx) => (
                 <div key={idx} className="flex items-center gap-2 text-[9.5px] font-semibold text-emerald-800">
-                  <Check className="w-3.5 h-3.5 text-emerald-600 stroke-[3] shrink-0" />
+                  <Check className="w-3.5 h-3.5 text-emerald-600 stroke-3 shrink-0" />
                   <span className="leading-tight">{highlight(item.titulo)}</span>
                 </div>
               ))}

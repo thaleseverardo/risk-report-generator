@@ -92,7 +92,7 @@ export default function Sidebar() {
           </div>
           <div>
             <div className="flex items-center gap-1.5">
-              <span className="font-display font-extrabold tracking-tight text-xl bg-gradient-to-r from-slate-900 via-slate-800 to-slate-700 bg-clip-text text-transparent">
+              <span className="font-display font-extrabold tracking-tight text-xl bg-linear-to-r from-slate-900 via-slate-800 to-slate-700 bg-clip-text text-transparent">
                 NEXA
               </span>
             </div>

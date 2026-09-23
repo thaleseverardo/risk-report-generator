@@ -5,7 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: '/PericiaDeCredito/',
+    base: '/risk-report-generator/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {

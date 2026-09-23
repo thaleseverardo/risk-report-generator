@@ -3,8 +3,8 @@ name: Deploy static content to Pages
 
 on:
   push:
-    branches: ['master'] # Atualiza sempre que houver push na master
-
+    branches: ['master'] 
+    
 # Configura as permissões do GITHUB_TOKEN para permitir o deploy
 permissions:
   contents: read
