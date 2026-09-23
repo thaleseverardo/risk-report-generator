@@ -73,7 +73,7 @@ export default function Page4({
                     <tr key={idx} className="hover:bg-rose-50/10">
                       <td className="py-2 px-3 font-mono text-slate-500">{row.data}</td>
                       <td className="py-2 px-3 font-mono text-slate-500">{row.disponib}</td>
-                      <td className="py-2 px-3 font-semibold text-slate-800 line-clamp-1 max-w-[130px]">{highlight(row.informante)}</td>
+                      <td className="py-2 px-3 font-semibold text-slate-800 line-clamp-1 max-w-32.5">{highlight(row.informante)}</td>
                       <td className="py-2 px-3 text-slate-600">{highlight(row.cidade)}</td>
                       <td className="py-2 px-3 text-slate-500 font-mono">{row.tipo}</td>
                       <td className="py-2 px-3 font-mono text-slate-400 text-[8px]">{row.contrato}</td>
@@ -134,7 +134,7 @@ export default function Page4({
                     <tr key={idx} className="hover:bg-rose-50/10">
                       <td className="py-2 px-3 font-mono text-slate-500">{row.data}</td>
                       <td className="py-2 px-3 font-mono text-slate-500">{row.disponib}</td>
-                      <td className="py-2 px-3 font-semibold text-slate-800 line-clamp-1 max-w-[130px]">{highlight(row.informante)}</td>
+                      <td className="py-2 px-3 font-semibold text-slate-800 line-clamp-1 max-w-32.5">{highlight(row.informante)}</td>
                       <td className="py-2 px-3 text-slate-600">{highlight(row.cidade)}</td>
                       <td className="py-2 px-3 text-slate-500 font-mono">—</td>
                       <td className="py-2 px-3 font-mono text-slate-400 text-[8px]">{row.contrato}</td>
